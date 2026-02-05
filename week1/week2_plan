@@ -1,0 +1,55 @@
+WEEK 2 CLEANING PLAN
+====================
+Name: [Demi Wright]
+Date: [5/2/26]
+
+I've completed all 5 tutorials and application checklists.
+
+Looking across all my checklists, these are the 2 most important issues 
+to address in Week 2:
+
+
+ISSUE 1 (Most Important)
+-------------------------
+Brief description: [NA values are present]
+
+Which tutorial provides the solution: [Missing Data]
+
+Which variable(s) affected: [Eggs laid, hatched and body mass (mg)]
+
+Why this is important to fix: [may skew visualisation and anlaysis if left uchecked]
+
+What I plan to do: [use the drop.na command to omit values]
+
+
+
+ISSUE 2 (Second Most Important)
+--------------------------------
+Brief description: [duplicates]
+
+Which tutorial provides the solution: [duplicates]
+
+Which variable(s) affected: [13 data entries]
+
+Why this is important to fix: [Skews data if not genuine repeats]
+
+What I plan to do: [flag for review, continue analysis by removing duplicates]
+
+
+
+OTHER ISSUES I NOTICED (but won't fix in Week 2)
+-------------------------------------------------
+- [Issue 3 - Site A, B, C incontinuity]
+- [Issue 4 - ]
+- [Issue 5 - ]
+
+
+QUESTIONS TO DISCUSS IN WEEK 2
+-------------------------------
+Things I'm still unsure about:
+
+1. flagging?
+
+2. alternate Skimr techniques
+
+
