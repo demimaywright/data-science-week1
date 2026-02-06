@@ -119,6 +119,13 @@ mosquito_egg_data_step2 <- mosquito_egg_data_step1 |>
     any_flag = !is.na(flag_impossible) | !is.na(flag_implausible) 
   )
     
-    
+mosquito_egg_data_step2 |>
+  summarise(
+    n_impossible = sum(!is.na(flag_impossible)),
+    n_implausible = sum(!is.na(flag_implausible)),
+    total_flagged = sum(any_flag)
+  )
 
-mosquito_egg_data_step2
+# 3 impossible, 6 implausible rows of data.
+
+
