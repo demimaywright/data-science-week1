@@ -49,10 +49,17 @@ mosquito_egg_raw <- mosquito_egg_raw |>
       stringr::str_extract(treatment, "^[^_]+")
     )
   )
+
 # FIX 1: [NA values are present] ====
 
 # Show the problem:
 glimpse(mosquito_egg_raw)
+
+mosquito_egg_raw |>
+  summarise(
+    sum(is.na())
+    )
+
 # Nas are present in four different columns
 
 # Fix it:
@@ -91,5 +98,27 @@ mosquito_egg_raw %>%
   
   # What changed and why it matters:
   # from correcting the string and correcting body mass values, the duplicates were automatically removed.
-  #
 
+
+# Fix 3: 
+
+# from my partner's feedback: 
+# flagging impossible and implausible data for body mass
+
+mosquito_egg_data_step2 <- mosquito_egg_data_step1 |>
+  mutate(
+    flag_impossible = case_when(
+      body_mass_mg <= 0 ~ "negative_mass",
+      TRUE ~ NA_character_
+    ),
+    flag_implausible = case_when(
+      body_mass_mg < 30 ~ "suspiciously_light",
+      body_mass_mg > 110 ~ "suspiciously_heavy",
+      TRUE ~ NA_character_
+    ),
+    any_flag = !is.na(flag_impossible) | !is.na(flag_implausible) 
+  )
+    
+    
+
+mosquito_egg_data_step2
