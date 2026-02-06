@@ -17,7 +17,7 @@ Which tutorial provides the solution: [Missing Data]
 
 Which variable(s) affected: [Eggs laid, hatched and body mass (mg)]
 
-Why this is important to fix: [may skew visualisation and anlaysis if left uchecked]
+Why this is important to fix: [may skew visualisation and analysis if left uchecked]
 
 What I plan to do: [use the drop.na command to omit values]
 
